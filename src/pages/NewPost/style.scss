@@ -1,0 +1,47 @@
+@import '../../styles/vars';
+@import '../../styles/functions';
+
+.ts-newpost {
+    &__head {
+        position: relative;
+
+        &-arrow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: vsize(24px);
+
+            &:hover path {
+                fill: $accent-color;
+            }
+        }
+
+        &-title {
+            text-align: center;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        margin-top: vsize(40px);
+
+        &-input {
+            margin-top: vsize(40px);
+        }
+
+        &-textarea {
+            height: vsize(144px);
+            margin-top: vsize(24px);
+        }
+
+        &-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: vsize(32px);
+        }
+    }
+}

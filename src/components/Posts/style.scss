@@ -1,0 +1,57 @@
+@import '../../styles/vars';
+@import '../../styles/functions';
+
+.ts-posts {
+    &__type {
+        &-buttons {
+            display: flex;
+            justify-content: center;
+        }
+
+        &-button {
+            box-sizing: border-box;
+            padding: vsize(4px) vsize(16px) vsize(5px);
+            border: 1px solid transparent;
+
+            &--active {
+                border: 1px solid $black-color;
+                border-radius: $border-radius;
+            }
+        }
+    }
+
+    &__posts {
+        margin: vsize(40px) 0;
+
+        &--list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &--tiles {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0px, 3fr));
+            gap: vsize(24px);
+        }
+    }
+
+    &__post {
+        border-top: 1px solid $black-color;
+
+        &:last-child {
+            border-bottom: 1px solid $black-color;
+        }
+    }
+
+    &__posts--tiles &__post {
+        border: none;
+    }
+
+    &__load-button {
+        margin: 0 auto;
+
+        &:hover {
+            color: $accent-color;
+        }
+    }
+}

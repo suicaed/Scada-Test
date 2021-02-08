@@ -1,0 +1,12 @@
+@import '../../styles/vars';
+@import '../../styles/functions';
+
+.ts-main {
+    &__slider {
+        margin: 0 (-$page-padding);
+    }
+
+    &__posts {
+        margin-top: vsize(80px);
+    }
+}

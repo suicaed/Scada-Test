@@ -1,0 +1,21 @@
+@import './reset';
+@import './vars';
+@import './functions';
+@import './fonts';
+
+body {
+    font-family: 'IBM Plex Serif', arial;
+    font-size: vsize(18px);
+    font-weight: normal;
+    line-height: 1.33;
+    background-color: $pale-color;
+    color: $black-color;
+}
+
+h3 {
+    font-size: vsize(24px);
+}
+
+button {
+    cursor: pointer;
+}

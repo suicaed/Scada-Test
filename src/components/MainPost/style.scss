@@ -1,0 +1,24 @@
+@import '../../styles/vars';
+@import '../../styles/functions';
+
+.ts-mainpost {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    background-color: $white-color;
+    pointer-events: auto;
+    cursor: pointer;
+
+    &__wrapper {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+        padding: vsize(24px) vsize(32px) vsize(32px);
+    }
+
+    &:hover &__button {
+        color: $accent-color;
+    }
+}

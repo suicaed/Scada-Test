@@ -1,0 +1,47 @@
+@import './vars';
+
+body, ul, h1, h2, h3, p {
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+ul, button {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input, textarea {
+    font: inherit;
+    outline: none;
+    color: inherit;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    box-shadow: 0 0 0 30px $white-color inset !important;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    display: block;
+    border: none;
+    font: inherit;
+    background-color: inherit;
+    outline: none;
+}

@@ -1,0 +1,7 @@
+@function vsize($value, $vw: 1280) {
+    @return $value / ($vw * 0.01 * 1px) * 1vw;
+}
+
+@function percent($value, $fullvalue) {
+    @return ($value / $fullvalue) * 100%;
+}

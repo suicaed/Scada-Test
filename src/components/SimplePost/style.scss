@@ -1,0 +1,67 @@
+@import '../../styles/vars';
+@import '../../styles/functions';
+
+.ts-simplepost {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: vsize(16px) 0;
+        overflow: hidden;
+    }
+
+    &__arrow {
+        height: vsize(32px);
+        width: vsize(32px);
+
+        &-svg {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &:hover &__arrow {
+        &-svg>path {
+            fill: $accent-color;
+        }
+    }
+    &--tiles & {
+        &__img {
+            min-height: vsize(180px);
+            width: 100%;
+            background-image: url(./pic.svg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        &__title {
+            max-width: 100%;
+            padding: vsize(12px) vsize(16px) 0;
+            font-size: vsize(18px);
+        }
+
+        &__arrow {
+            position: absolute;
+            right: vsize(16px);
+            bottom: vsize(12px);
+            height: vsize(24px);
+            width: vsize(24px);
+        }
+    }
+}
+
+.ts-simplepost--tiles.ts-simplepost {
+    &__wrapper {
+        position: relative;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        height: vsize(273px);
+        padding: 0;
+    }
+}

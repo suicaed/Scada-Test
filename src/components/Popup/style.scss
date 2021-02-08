@@ -1,0 +1,71 @@
+@import '../../styles/vars';
+@import '../../styles/functions';
+
+.ts-popup {
+    height: 100%;
+    width: 100%;
+
+    &__wrapper {
+        position: relative;
+        cursor: auto;
+    }
+
+    &__close {
+        position: absolute;
+        top: vsize(40px);
+        right: vsize(40px);
+        height: vsize(32px);
+        width: vsize(32px);
+        cursor: pointer;
+
+        &:hover {
+            g {
+                stroke: $accent-color;
+            }
+        }
+    }
+
+    &__post {
+        padding: vsize(40px) vsize(40px) vsize(48px);
+        background-color: $white-color;
+
+        &-title {
+            width: vsize(474px);
+        }
+
+        &-text {
+            width: 100%;
+            margin-top: vsize(24px);
+        }
+    }
+
+    &__comments {
+        padding: vsize(40px);
+
+        &-list {
+            margin-top: vsize(24px);
+
+            &-item {
+                padding: vsize(16px) 0;
+                border-top: 1px solid $black-color;
+
+                &:last-child {
+                    border-bottom: 1px solid $black-color;
+                }
+
+                &-body {
+                    margin-top: vsize(8px);
+                    color: $grey-color;
+                }
+            }
+        }
+
+        &-button {
+            margin: vsize(24px) auto 0;
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+@import '../../styles/vars';
+@import '../../styles/functions';
+
+.ts-button {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 4px;
+        font-size: vsize(18px);
+    }
+
+    &__text {
+        margin-top: vsize(-1px);
+    }
+}
+
+.ts-button--light.ts-button {
+    &__wrapper {
+        border-color: $black-color;
+        background-color: $white-color;
+        color: $black-color;
+
+        &:hover {
+            border-color: $accent-color;
+            color: $accent-color;
+        }
+    }
+}
+
+.ts-button--dark.ts-button {
+    &__wrapper {
+        border-color: $black-color;
+        background-color: $black-color;
+        color: $white-color;
+
+        &:hover {
+            border-color: $accent-color;
+            background-color: $accent-color;
+        }
+    }
+}

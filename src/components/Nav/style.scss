@@ -1,0 +1,34 @@
+@import '../../styles/vars';
+@import '../../styles/functions';
+
+.ts-nav {
+    &__list {
+        display: flex;
+
+        &-item {
+            margin-left: vsize(8px);
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        padding: vsize(4px) vsize(16px) vsize(5px);
+        border-radius: $border-radius;
+
+        &:hover {
+            color: $accent-color;
+        }
+
+        &--active {
+            background-color: $white-color;
+
+            &:hover {
+                color: inherit;
+            }
+        }
+    }
+}

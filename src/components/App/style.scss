@@ -1,0 +1,90 @@
+@import '../../styles/vars';
+@import '../../styles/functions';
+
+.ts-app {
+    &__wrapper {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        padding: vsize(56px) $page-padding 0;
+    }
+
+    &__header {
+        flex-shrink: 0;
+    }
+
+    &__page-content {
+        flex-grow: 1;
+        margin-top: vsize(80px)
+    }
+
+    &__footer {
+        flex-shrink: 0;
+        height: vsize(144px);
+        margin: auto (-$page-padding) 0;
+        padding-top: vsize(80px);
+    }
+
+    &__newpost {
+        width: vsize(374px);
+        margin: 0 auto;
+    }
+
+    &__404 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        pointer-events: none;
+    }
+
+    &--default {
+        &-button {
+            height: vsize(48px);
+            width: vsize(175px);
+        }
+
+        &-input {
+            padding: vsize(12px) vsize(16px);
+            border: none;
+
+            &::placeholder {
+                font-size: vsize(18px);
+                color: $grey-color;
+            }
+        }
+    }
+
+    &__popup {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        z-index: 999;
+
+        &-wrapper {
+            position: relative;
+            width: vsize(653px);
+            margin: vsize(120px) auto;
+            border-radius: 8px;
+            background-color: $pale-color;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        &-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba($black-color, 0.25);            
+            cursor: pointer;
+        }
+    }
+}
