@@ -22,7 +22,7 @@ module.exports = {
         rules: [
             {
                 test: /\.s[ac]ss$/,
-                exclude: /(node_modules|bower_components)/,
+                exclude: /(bower_components)/,
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
