@@ -9,26 +9,31 @@ class Popup extends React.Component {
     state = {
         postData: {},
         comments: [],
+        loading: false,
         allCommentsLoaded: false
     }
 
     getMoreComments = async () => {
         const comments = await store.getComments(4);
-        this.setState({comments: [...this.state.comments, ...comments.comments]});
+        this.setState({ comments: [...this.state.comments, ...comments.comments] });
         if (comments.end) {
-            this.setState({allCommentsLoaded: true});
+            this.setState({ allCommentsLoaded: true });
         }
     }
 
     async componentDidMount() {
+        this.setState({
+            loading: true
+        });
         const post = await store.getPostById();
         const comments = await store.getComments(2);
         this.setState({
             postData: post,
-            comments: comments.comments
+            comments: comments.comments,
+            loading: false
         });
         if (comments.end) {
-            this.setState({allCommentsLoaded: true});
+            this.setState({ allCommentsLoaded: true });
         }
     }
 
@@ -61,12 +66,12 @@ class Popup extends React.Component {
                 </div>
                 <div className="ts-popup__comments">
                     <h3 className="ts-popup__comments-title">
-                        {this.state.comments ? 'comments' : 'here is no comments'}
+                        {this.state.loading ? 'loading...' : this.state.comments ? 'comments' : 'here is no comments'}
                     </h3>
                     <ul className="ts-popup__comments-list">
                         {comments}
                     </ul>
-                    <button onClick={this.getMoreComments} style={{display: this.state.allCommentsLoaded ? 'none' : ''}} className="ts-popup__comments-button">load more</button>
+                    {this.state.loading ? null : <button onClick={this.getMoreComments} style={{ display: this.state.allCommentsLoaded ? 'none' : '' }} className="ts-popup__comments-button">load more</button>}
                 </div>
             </div>
         );
