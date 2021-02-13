@@ -5,6 +5,7 @@
     &__slider {
         margin: 0 vsize(-55px);
         padding: 0 vsize(55px);
+        overflow: hidden;
 
         &-item {
             height: vsize(264px);
