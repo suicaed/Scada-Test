@@ -12,11 +12,17 @@ class NewPost extends React.Component {
     }
 
     onTitleChange = (e) => {
-        this.setState({ title: e.target.value });
+        const val = e.target.value;
+        const regex = /^[A-Za-z0-9-\? \.]*$/;
+        val.match(regex) ?
+            this.setState({ title: val }) : {};
     }
 
     onTextChange = (e) => {
-        this.setState({ text: e.target.value });
+        const val = e.target.value;
+        const regex = /^[A-Za-z0-9-\? \.]*$/;
+        val.match(regex) ?
+            this.setState({ text: val }) : {};
     }
 
     render() {
